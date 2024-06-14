@@ -16,12 +16,24 @@ footer{
     width: 50%;
   }
 
+  .center-header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+  }
+
   .center-text {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     text-align: center;
+    font-size: 22pt;
+  }
+
+  .sticky {
+    position:sticky; top:0; z-index: 0;
   }
 
   .libre-barcode-128-text-regular {
@@ -102,6 +114,16 @@ input[type=button] {
 	margin-top: 1em;
   }
 
+  @media screen and (max-width: 1000px) {
+    .center-header {
+      max-width: 65%;
+    }
+
+    .sticky {
+      position:inherit;
+    }
+  }
+
   @media screen and (max-width: 800px) {
 	#column {
 	  flex: 100%;
@@ -111,10 +133,33 @@ input[type=button] {
 	#about {
 	max-width: 60%;
 	}
+
+  .center-header {
+    max-width: 80%;
+  }
+
+  .grid-item {
+    font-size: 15pt;
+  }
+
+  .grid-item-2 {
+    font-size: 15pt;
+  }
+
   }
 
   @media screen and (max-width: 500px) {
 	  #about {max-width: 90%;}
 	  #row {width: 90%; padding: 0;}
+  
+
+  .grid-item {
+    font-size: 11pt;
   }
+
+  .grid-item-2 {
+    font-size: 11pt;
+  }
+  }
+
 
