@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="style.css" /> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Jersey+10&display=swap" rel="stylesheet">
+<script> src="/node_modules/jquery/dist/jquery.js"</script>
+<script src="masonry.pkgd.js"></script>
+<script> src="jquery.colorbox.js"</script>
+<script> src="script.js"</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+</head>
+
+<header style="margin-bottom: 25px; position:sticky; top:0; z-index: 0;">
+<img style="margin-top: 25px; margin-bottom: 25px;" class="center" src="/images/logo line.png">
+
+<p style="margin-top: 25px; margin-bottom: 25px;" class="center" id="fucksafari">
+    <input class="center libre-barcode-128-text-regular" type="button" id="hideshow" value="about" style="font-size: 50px;"></p>
+
+<div class="center" id="about" style="display: none; margin-top: 25px; margin-bottom: 25px;">
+    <p class="center-text jersey-10-regular" style="font-size: 22px;">textiles from portland maine<br><br>
+        everything made by hand in a boiling loft space<br><br>
+        commissions / client work / hate mail: 228printers@gmail.com
+    </p></div>
+</header>
+
+    <body style="display: flex;flex-direction: row;flex-wrap: wrap;">
+
+        <div style="z-index: 1;" class="grid">
+            
+  <div class="grid-item-2">
+    <img style="width: 100%;" src="/images/area man turtleneck.png">
+    <p>thrifted turtleneck
+    <br>
+    area man / "everywhere" prints on front
+    <br>
+    halftone cabinet photo on back, caption covered with sewn-on duck canvas
+    </p>
+</div>
+
+<div class="grid-item-2">
+    <img style="width: 100%;" src="/images/wipeout.png">
+    <p>three-color print memorializing garrett hill's infamous coffee run
+        <br>
+        printed on everybody.world long sleeve trash tee
+        </p>
+</div>
+
+<div class="grid-item-2">
+    <img style="width: 100%;" src="/images/228 shirts.png">
+    <p>
+    thrifted long sleeve shirts
+    <br>
+    reverse tie-dyed arms with screen printed 228 branding on front
+    </p>
+</div>
+
+<div class="grid-item">
+    <img style="width: 100%;" src="/images/dragon_dye_1.jpg">
+    <p>
+    ombré dyed factory reject comfort colors 1717 cotton tee
+    <br>
+eight-headed dragon print, image found in 19th century manuscript
+    </p>
+</div>
+
+<div class="grid-item-2">
+    <img style="width: 100%;" src="/images/renys sewer.png">
+<p>
+reny's "a maine adventure" short sleeve comfort colors tee
+<br>
+portland sewer cap used as printing plate
+<br>
+rolled on ink, put shirt over sewer, jumped on shirt to complete impression
+</p>
+</div>
+
+<div class="grid-item-2">
+    <img style="width: 100%;" src="/images/sic spes destitvit.png">
+<p>
+    geode dyed cotton champion tee
+    <br>
+    portland sewer cap impression on front
+    <br>
+    "sic spes destitvit" ("so hope ceased") print on back
+</p>
+</div>
+
+<div class="grid-item">
+    <img style="width: 100%;" src="/images/hockey_jersey_1.jpg">
+    <p>
+    thrifted vintage hockey jersey
+    <br>
+    "area man" caricature prints on front
+    </p>
+</div>
+
+<div class="grid-item">
+    <img style="width: 100%;" src="/images/area_man_map_1.jpg">
+<p>
+factory reject j. crew cotton tee
+<br>
+228 / area man branding
+<br>
+background print from found screen, c. 2008
+</p>
+</div>
+
+<div class="grid-item-2">
+    <img style="width: 100%;" src="/images/acdelco.png">
+<p>
+$1 marden's ac delco shirts, possible chemical staining during production
+<br>
+228 x acdelco collab ft. eight-headed dragon print
+</p>
+</div>
+
+<div class="grid-item-2">
+    <img style="width: 100%;" src="/images/emily shirt.png">
+    <p>
+    overstock j. crew heavyweight cotton dress shirt
+    <br>
+    "another day in paradise" scene print on back, 228 branding on back of collar
+    <br>
+    found pattern on half of front
+    </p>
+</div>
+
+<footer>
+    <img src="/images/made by hand.png" style="max-width: 200px;">    
+    </footer>
+
+</div>
+
+<script>
+    $("#hideshow").on("click",function(){
+    $("#about").toggle("display")
+    });
+    </script>
+
+</body>
+
+</html>

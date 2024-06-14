@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "jquery-colorbox": "^1.6.4",
+    "masonry-layout": "^4.2.2"
+  }
+}
