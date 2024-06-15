@@ -83,7 +83,7 @@ footer{
       margin: 10px;
       width: fit-content;
       animation-name: marquee-right-to-left;
-      animation-duration: 270s;
+      animation-duration: 300s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
     }
@@ -226,7 +226,7 @@ input[type=button] {
     }
 
     .marquee-alternative p {
-      animation-duration: 300s;
+      animation-duration: 330s;
     }
   }
 
@@ -272,6 +272,6 @@ input[type=button] {
 
   .marquee-alternative p {
     font-size: 18px;
-    animation-duration: 350s;
+    animation-duration: 360s;
   }
   }
