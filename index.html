@@ -33,15 +33,33 @@
 });
 </script>
 
+<script>
+window.onload=function(){
+let marqueeText = document.querySelector(".marquee-content");
+let button = document.querySelector(".btn");
+button.addEventListener("click", () => {
+  const isRunning = marqueeText.style.animationPlayState == "running";
+
+  // change behaviour of animation and button
+  if (isRunning) {
+    // stop the animation
+    marqueeText.style.animationPlayState = "paused";
+  } else {
+    // start the animation
+    marqueeText.style.animationPlayState = "running";
+  }
+})};
+</script>
+
 </head>
 
-<header id="header" class="sticky" style="margin-bottom: 25px;">
-<img style="margin-top: 25px; margin-bottom: 25px;" class="center-header" src="/images/logo line.png">
+<header id="header" class="sticky">
+<img style="margin-top: 25px;" class="center-header" src="/images/logo line.png">
 
-<p style="margin-top: 25px; margin-bottom: 25px;" class="center" id="fucksafari">
+<p style="margin-top: 40px; margin-bottom: 60px;" class="center" id="fucksafari">
     <input class="center libre-barcode-128-text-regular" type="button" id="hideshow" value="about" style="font-size: 50px;"></p>
 
-<div class="center" id="about" style="display: none; margin-top: 25px; margin-bottom: 25px;">
+<div class="center" id="about" style="display: none; margin-bottom: 60px;">
     <p class="center-text jersey-10-regular">textiles from portland maine<br><br>
         everything made by hand in a boiling loft space<br><br>
         commissions / client work / hate mail: 228printers@gmail.com
@@ -50,24 +68,15 @@
 
     <body style="display: flex;flex-direction: row;flex-wrap: wrap;">
 
-        <div id="sticky" style="width: 100%;"><marquee class="GeneratedMarquee" direction="left" scrollamount="11" behavior="scroll">
-            "The T-shirt, now unisex and all-purpose, began its life as an undergarment worn by men. In the Middle Ages, T-shaped shirts made of woven cotton or linen provided a layer between the body and the garments worn over top. These shirts were easy to wash and provided a hygienic barrier for the skin. Wearing a clean, laundered shirt showed off a gentleman’s wealth. The shape of the shirt — large, rectangular pieces of cloth sewn into a “T” shape with long shirt tails that tucked between the legs — changed in the 19th century when the shirt tails were removed and the body of the shirt slimmed down to a tighter fit.
+        <div class="marquee-container" id="sticky">
+            <div class="marquee-alternative" id="sticky" style="width: 100%;">
+     <p  class="marquee-content" style="animation-play-state: running; white-space: nowrap">
+            "The T-shirt, now unisex and all-purpose, began its life as an undergarment worn by men. In the Middle Ages, T-shaped shirts made of woven cotton or linen provided a layer between the body and the garments worn over top. These shirts were easy to wash and provided a hygienic barrier for the skin. Wearing a clean, laundered shirt showed off a gentleman’s wealth. The shape of the shirt — large, rectangular pieces of cloth sewn into a “T” shape with long shirt tails that tucked between the legs — changed in the 19th century when the shirt tails were removed and the body of the shirt slimmed down to a tighter fit. The T-shirt underwent several significant changes in the 19th century. New knitting technology meant that it could be mass-produced in a more form-fitting shape, with added refinements and in a wider range of textiles such as calico, jersey and wool. Hygienists lauded knit-wool, T-shaped undershirts as protection against colds and bodily maladies, and recommended that women wear them instead of corsets. By the late 19th century, British sailors had begun wearing white flannel T-shirts under their woollen uniforms. At the end of the century, the British Royal Navy began allowing their sailors to wear these undershirts when working on deck. The practice of wearing T-shirts as outerwear was quickly adopted by working-class men on the weekends. In 1880, the US Navy included a loose-fitting flannel shirt with a square neck in its uniform; in 1913, it adopted a white, cotton-knit T-shirt as its official underwear. The cotton dried faster than the flannel and was more comfortable. The T-shirt business boomed in the early decades of the 20th century. The P.H. Hanes Knitting Company began producing men’s underwear in 1901, while Fruit of the Loom began marketing T-shirts on a large scale in the 1910s. By the 1930s, T-shirts were standard issue for college sportsmen. In 1938, the American retailer Sears, Roebuck and Company began offering white cotton “gob” (slang for sailor) shirts for sale. “It’s an undershirt, it’s an outershirt” the advertisement stated, reassuring men that they could “wear it as an outershirt for sports and for lounging, or as an undershirt — it’s practical, correct, either way”. By the Second World War, the US Army and Navy were issuing white, short-sleeved, cotton T-shirts to their troops. Wartime and post-war imagery of T-shirt-clad soldiers at war helped popularise the association between the T-shirt and heroic masculinity. “You don’t need to be a soldier to have your own personal T-shirt,” Sears proclaimed in 1941. By the time that Hollywood’s rising method actors began donning white T-shirts to signal their character’s rebelliousness — Montgomery Clift in A Place in the Sun (1951), Marlon Brando in The Wild One (1953) and James Dean in Rebel Without a Cause (1955) — the T-shirt officially entered the man’s wardrobe as a garment that could be worn on its own outside of the workplace. It would take another 60 years or so for the T-shirt to be accepted as office attire, though. Worn close to the skin and revealing of the body, the T-shirt’s inherent sex appeal was first picked up by actresses and singers in the 1960s. By the 1970s, the T-shirt was truly unisex. In 1977, Jacqueline Bisset scandalised American movie goers with her wet, see-through T-shirt in the movie The Deep. As the T-shirt made its move from underwear to outerwear, the garment became a blank slate for messages, whether political, advertorial, graphic or humorous. Technological advances in silk-screen printing in the early 1960s made it easy, fast and inexpensive to print designs onto shirts. By the 1970s, consumers could have personalised, custom-made T-shirts. Businesses soon realised the potential of T-shirts for marketing, as did bands and music management companies. Because of its association with the working class and the subversive nature of wearing an undergarment on the outside, the T-shirt has appealed to generations of musicians, writers, actors and intellectuals. Rappers donned T-shirts in the 1990s, as did pop stars and models. And while the T-shirt can flatten socio-economic standing — inexpensive T-shirts are worn by a wide range of earners — it can also be a clear mark of conspicuous consumption in its designer versions. High-fashion T-shirts have been marketed since the 1950s and the garment has been reinterpreted by many designers since: from Yves Saint Laurent and Dior in the 1970s, to Chanel, Lacoste, Calvin Klein and Polo Ralph Lauren in the 1990s. Giorgio Armani, Helmet Lang and Nicolas Ghesquière wear the T-shirt as a uniform. Today, it’s come a long way from its humble beginnings as a utilitarian garment over a century ago; in fact, it’s hard to imagine any wardrobe without a T-shirt." -Vogue     
+        </p></div>
+        <button type="button" class="btn" aria-pressed="false"><span>play/pause</span></button>
+    </div>
 
-            The T-shirt underwent several significant changes in the 19th century. New knitting technology meant that it could be mass-produced in a more form-fitting shape, with added refinements and in a wider range of textiles such as calico, jersey and wool. Hygienists lauded knit-wool, T-shaped undershirts as protection against colds and bodily maladies, and recommended that women wear them instead of corsets. By the late 19th century, British sailors had begun wearing white flannel T-shirts under their woollen uniforms. At the end of the century, the British Royal Navy began allowing their sailors to wear these undershirts when working on deck. The practice of wearing T-shirts as outerwear was quickly adopted by working-class men on the weekends. In 1880, the US Navy included a loose-fitting flannel shirt with a square neck in its uniform; in 1913, it adopted a white, cotton-knit T-shirt as its official underwear. The cotton dried faster than the flannel and was more comfortable.
-            
-            The T-shirt business boomed in the early decades of the 20th century. The P.H. Hanes Knitting Company began producing men’s underwear in 1901, while Fruit of the Loom began marketing T-shirts on a large scale in the 1910s. By the 1930s, T-shirts were standard issue for college sportsmen. In 1938, the American retailer Sears, Roebuck and Company began offering white cotton “gob” (slang for sailor) shirts for sale. “It’s an undershirt, it’s an outershirt” the advertisement stated, reassuring men that they could “wear it as an outershirt for sports and for lounging, or as an undershirt — it’s practical, correct, either way”. By the Second World War, the US Army and Navy were issuing white, short-sleeved, cotton T-shirts to their troops. Wartime and post-war imagery of T-shirt-clad soldiers at war helped popularise the association between the T-shirt and heroic masculinity. “You don’t need to be a soldier to have your own personal T-shirt,” Sears proclaimed in 1941.
-
-            By the time that Hollywood’s rising method actors began donning white T-shirts to signal their character’s rebelliousness — Montgomery Clift in A Place in the Sun (1951), Marlon Brando in The Wild One (1953) and James Dean in Rebel Without a Cause (1955) — the T-shirt officially entered the man’s wardrobe as a garment that could be worn on its own outside of the workplace. It would take another 60 years or so for the T-shirt to be accepted as office attire, though.
-
-Worn close to the skin and revealing of the body, the T-shirt’s inherent sex appeal was first picked up by actresses and singers in the 1960s. By the 1970s, the T-shirt was truly unisex. In 1977, Jacqueline Bisset scandalised American movie goers with her wet, see-through T-shirt in the movie The Deep.
-
-As the T-shirt made its move from underwear to outerwear, the garment became a blank slate for messages, whether political, advertorial, graphic or humorous. Technological advances in silk-screen printing in the early 1960s made it easy, fast and inexpensive to print designs onto shirts. By the 1970s, consumers could have personalised, custom-made T-shirts. Businesses soon realised the potential of T-shirts for marketing, as did bands and music management companies.
-
-Because of its association with the working class and the subversive nature of wearing an undergarment on the outside, the T-shirt has appealed to generations of musicians, writers, actors and intellectuals. Rappers donned T-shirts in the 1990s, as did pop stars and models. And while the T-shirt can flatten socio-economic standing — inexpensive T-shirts are worn by a wide range of earners — it can also be a clear mark of conspicuous consumption in its designer versions. High-fashion T-shirts have been marketed since the 1950s and the garment has been reinterpreted by many designers since: from Yves Saint Laurent and Dior in the 1970s, to Chanel, Lacoste, Calvin Klein and Polo Ralph Lauren in the 1990s. Giorgio Armani, Helmet Lang and Nicolas Ghesquière wear the T-shirt as a uniform. Today, it’s come a long way from its humble beginnings as a utilitarian garment over a century ago; in fact, it’s hard to imagine any wardrobe without a T-shirt." -Vogue
-            
-        </marquee></div>
-
-        <div style="z-index: 1;" class="grid">
+        <div style="z-index: 1; margin-top: 80px;" class="grid">
             
   <div class="grid-item-2">
     <img style="width: 100%;" src="/images/area man turtleneck.png">
