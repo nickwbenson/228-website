@@ -33,7 +33,7 @@ footer{
   }
 
 #sticky.fixed {
-    display: block;
+    display: flex;
     position: sticky;
     top: 0;
     width: 100%;
@@ -41,17 +41,93 @@ footer{
 }
 
   .GeneratedMarquee {
-    font-family: "Libre Barcode 128 Text", system-ui;
+    font-family: "Jersey 10", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 29pt;
+    font-size: 16pt;
     line-height:1.3em;
     color:#000000;
+    background-color: #ffffff;
+    overflow: hidden;
     padding:0.3em;
     margin-bottom: 2em;
     border: solid;
     border-left-style: none;
     border-right-style: none;
+    }
+
+    .marquee-alternative {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .right-to-left p {
+      margin: 0;
+      width: fit-content;
+    }
+
+    @keyframes marquee-right-to-left{
+      from {
+        transform: translateX(100vw);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    .marquee-alternative p {
+      font-family: "Jersey 10", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 24px;
+      margin: 10px;
+      width: fit-content;
+      animation-name: marquee-right-to-left;
+      animation-duration: 270s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    .marquee-alternative p {
+      width: fit-content;
+      /* animation got removed here */
+    }
+
+    .marquee-container {
+      display: flex;
+      align-items: center;
+      border: 2px solid #000;
+      width: 100%;
+      background-color: white;
+      border-left-style: none;
+      border-right-style: none;
+    }
+    
+    .marquee-content {
+      margin: 0;
+      width: fit-content;
+    }
+
+    .btn {
+      cursor: pointer;
+      background-color: white;
+      border: 0;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding: 1.1rem 1rem;
+      background-image: url(images/play\ pause.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    .btn span {
+      display: none;
+    }
+    
+    .btn:hover,
+    .btn:focus-visible,
+    .btn[aria-pressed="true"]:hover {
+      background-color: white;
     }
 
     #rotate {
@@ -148,6 +224,10 @@ input[type=button] {
     .sticky {
       position:inherit;
     }
+
+    .marquee-alternative p {
+      animation-duration: 300s;
+    }
   }
 
   @media screen and (max-width: 800px) {
@@ -155,6 +235,10 @@ input[type=button] {
 	  flex: 100%;
 	  max-width: 100%;
 	}
+
+  .center-text {
+    font-size: 22px;
+  }
 
 	#about {
 	max-width: 60%;
@@ -171,8 +255,7 @@ input[type=button] {
   .grid-item-2 {
     font-size: 15pt;
   }
-
-  }
+}
 
   @media screen and (max-width: 500px) {
 	  #about {max-width: 90%;}
@@ -180,10 +263,15 @@ input[type=button] {
   
 
   .grid-item {
-    font-size: 11pt;
+    font-size: 13pt;
   }
 
   .grid-item-2 {
-    font-size: 11pt;
+    font-size: 13pt;
+  }
+
+  .marquee-alternative p {
+    font-size: 18px;
+    animation-duration: 350s;
   }
   }
